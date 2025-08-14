@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- La balise meta charset définit l'encodage des caractères pour afficher correctement les accents français -->
+    <meta charset="UTF-8">
+    <!-- Cette balise permet l'adaptation responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre qui s'affiche dans l'onglet du navigateur -->
+    <title>Cours HTML Complet - Développement Web</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+  
+</head>
+<body>
+    <!-- Container principal qui englobe tout le contenu -->
+    <div class="container">
+        <!-- En-tête de notre cours -->
+        <header>
+            <!-- H1 : titre principal de la page, très important pour le SEO -->
+            <h1>🌟 Cours HTML Complet - De Débutant à Intermédiaire</h1>
+            <!-- Paragraphe d'introduction avec mise en forme -->
+            <p><strong>Bienvenue dans ce cours HTML complet !</strong> Ce guide vous accompagnera dans l'apprentissage du HTML depuis les bases jusqu'aux concepts avancés. Chaque ligne de code sera expliquée en détail.</p>
+        </header>
+
+        <!-- Navigation / Table des matières -->
+        <nav class="table-matieres">
+            <h2>📚 Table des Matières</h2>
+            <ul>
+                <li><a href="#introduction">1. Introduction au HTML</a></li>
+                <li><a href="#commencer">2. Comment commencer un projet ?</a></li>
+                <li><a href="#structure">3. Structure de base d'une page HTML</a></li>
+                <li><a href="#balises">4. Qu'est-ce qu'une balise ?</a></li>
+                <li><a href="#html5">5. Les nouvelles balises HTML5</a></li>
+                <li><a href="#attributs">6. Les attributs HTML</a></li>
+                <li><a href="#commentaires">7. Les commentaires</a></li>
+                <li><a href="#titres">8. Les titres (h1 à h6)</a></li>
+                <li><a href="#texte">9. Mise en forme du texte</a></li>
+                <li><a href="#listes">10. Les listes</a></li>
+                <li><a href="#liens">11. Les liens hypertexte</a></li>
+                <li><a href="#email-template">12. Créer un template d'email professionnel</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section 1: Introduction -->
+        <section id="introduction">
+            <h2>1. 📖 Introduction au HTML</h2>
+            <p>HTML (HyperText Markup Language) est le langage de balisage standard pour créer des pages web. Il décrit la structure et le contenu d'une page web à l'aide de balises.</p>
+            
+            <div class="important">
+                <strong>🎯 Objectif :</strong> Maîtriser HTML pour créer des pages web structurées et accessibles.
+            </div>
+        </section>
+
+        <!-- Section 2: Commencer un projet -->
+        <section id="commencer">
+            <h2>2. 🚀 Comment commencer un projet HTML ?</h2>
+            
+            <h3>Étapes pour créer votre premier projet :</h3>
+            <ol>
+                <li><strong>Créer un dossier</strong> pour votre projet (ex: "mon-premier-site")</li>
+                <li><strong>Ouvrir Visual Studio Code</strong> et ouvrir ce dossier</li>
+                <li><strong>Créer un fichier</strong> <code>index.html</code></li>
+                <li><strong>Installer des extensions utiles</strong> comme "Material Icon Theme" pour de jolies icônes</li>
+            </ol>
+            
+            <div class="important">
+                <strong>💡 Conseil pro :</strong> Utilisez l'extension "Live Server" dans VS Code pour voir vos modifications en temps réel !
+            </div>
+        </section>
+
+        <!-- Section 3: Structure de base -->
+        <section id="structure">
+            <h2>3. 🏗️ Structure de base d'une page HTML</h2>
+            <p>Voici la structure minimale que doit avoir toute page HTML :</p>
+            
+            <div class="code-block">
+&lt;!-- Déclaration du type de document HTML5 --&gt;
+&lt;!DOCTYPE html&gt;
+
+&lt;!-- Balise racine qui englobe tout le contenu, lang="fr" pour le français --&gt;
+&lt;html lang="fr"&gt;
+
+&lt;!-- En-tête de la page (métadonnées, non visible par l'utilisateur) --&gt;
+&lt;head&gt;
+    &lt;!-- Encodage des caractères pour les accents français --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    
+    &lt;!-- Responsive design pour mobile --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- Titre affiché dans l'onglet du navigateur --&gt;
+    &lt;title&gt;Ma première page HTML&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;!-- Corps de la page (contenu visible par l'utilisateur) --&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bonjour le monde !&lt;/h1&gt;
+    &lt;p&gt;Ceci est ma première page HTML.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </div>
+            
+            <div class="exemple">
+                <strong>Résultat :</strong> Cette structure crée une page web basique avec un titre et un paragraphe.
+            </div>
+        </section>
+
+        <!-- Section 4: Les balises -->
+        <section id="balises">
+            <h2>4. 🏷️ Qu'est-ce qu'une balise ?</h2>
+            <p>Une balise HTML est un élément de code entouré par des chevrons <code>&lt; &gt;</code>. La plupart des balises fonctionnent par paires :</p>
+            
+            <ul>
+                <li><strong>Balise ouvrante :</strong> <code>&lt;nom-balise&gt;</code></li>
+                <li><strong>Contenu :</strong> Le texte ou autres balises</li>
+                <li><strong>Balise fermante :</strong> <code>&lt;/nom-balise&gt;</code></li>
+            </ul>
+            
+            <div class="code-block">
+&lt;!-- Exemple de balise paragraphe --&gt;
+&lt;p&gt;Ceci est un paragraphe&lt;/p&gt;
+
+&lt;!-- Exemple de balise titre --&gt;
+&lt;h1&gt;Ceci est un titre principal&lt;/h1&gt;
+
+&lt;!-- Balises auto-fermantes (pas de contenu) --&gt;
+&lt;br&gt; &lt;!-- Retour à la ligne --&gt;
+&lt;hr&gt; &lt;!-- Ligne horizontale --&gt;
+&lt;img src="image.jpg" alt="Description"&gt; &lt;!-- Image --&gt;
+            </div>
+        </section>
+
+        <!-- Section 5: HTML5 -->
+        <section id="html5">
+            <h2>5. 🎨 Les nouvelles balises de structure HTML5</h2>
+            <p>HTML5 a introduit des balises sémantiques qui donnent du sens au contenu :</p>
+            
+            <div class="code-block">
+&lt;!-- Structure sémantique HTML5 --&gt;
+&lt;body&gt;
+    &lt;!-- En-tête de la page/section --&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Mon Site Web&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;!-- Navigation principale --&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#accueil"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;!-- Contenu principal --&gt;
+    &lt;main&gt;
+        &lt;!-- Article ou contenu principal --&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Mon premier article&lt;/h2&gt;
+            &lt;p&gt;Contenu de l'article...&lt;/p&gt;
+        &lt;/article&gt;
+        
+        &lt;!-- Contenu secondaire --&gt;
+        &lt;aside&gt;
+            &lt;h3&gt;Sidebar&lt;/h3&gt;
+            &lt;p&gt;Informations complémentaires...&lt;/p&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;!-- Pied de page --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Mon Site Web. Tous droits réservés.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+            </div>
+            
+            <div class="important">
+                <strong>🎯 Avantages :</strong> Meilleur référencement SEO, accessibilité améliorée, code plus lisible !
+            </div>
+        </section>
+
+        <!-- Section 6: Les attributs -->
+        <section id="attributs">
+            <h2>6. ⚙️ Qu'est-ce qu'un attribut ?</h2>
+            <p>Les attributs fournissent des informations supplémentaires sur les balises. Ils s'écrivent dans la balise ouvrante :</p>
+            
+            <div class="code-block">
+&lt;!-- Syntaxe: &lt;balise attribut="valeur"&gt;contenu&lt;/balise&gt; --&gt;
+
+&lt;!-- Attribut id (identifiant unique) --&gt;
+&lt;p id="mon-paragraphe"&gt;Paragraphe avec ID&lt;/p&gt;
+
+&lt;!-- Attribut class (pour le CSS) --&gt;
+&lt;p class="texte-important"&gt;Paragraphe avec classe&lt;/p&gt;
+
+&lt;!-- Attributs d'image --&gt;
+&lt;img src="photo.jpg" alt="Description de l'image" width="300" height="200"&gt;
+
+&lt;!-- Attributs de lien --&gt;
+&lt;a href="https://example.com" target="_blank" title="Aller vers example.com"&gt;Lien externe&lt;/a&gt;
+
+&lt;!-- Attributs multiples --&gt;
+&lt;div class="container" id="main-content" style="color: blue;"&gt;
+    Contenu avec plusieurs attributs
+&lt;/div&gt;
+            </div>
+        </section>
+
+        <!-- Section 7: Les commentaires -->
+        <section id="commentaires">
+            <h2>7. 💬 Ajouter des commentaires</h2>
+            <p>Les commentaires permettent d'expliquer le code. Ils ne sont pas affichés sur la page :</p>
+            
+            <div class="code-block">
+&lt;!-- Ceci est un commentaire sur une ligne --&gt;
+
+&lt;!--
+Ceci est un commentaire
+sur plusieurs lignes
+très utile pour expliquer du code complexe
+--&gt;
+
+&lt;div class="header"&gt;
+    &lt;!-- Section d'en-tête de la page --&gt;
+    &lt;h1&gt;Mon titre&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- TODO: Ajouter le footer plus tard --&gt;
+            </div>
+            
+            <div class="important">
+                <strong>🔥 Raccourci VS Code :</strong> <code>Ctrl + /</code> (Windows/Linux) ou <code>Cmd + /</code> (Mac) pour commenter/décommenter rapidement !
+            </div>
+        </section>
+
+        <!-- Section 8: Les titres -->
+        <section id="titres">
+            <h2>8. 📝 Ajouter des titres (h1 à h6)</h2>
+            <p>HTML propose 6 niveaux de titres pour hiérarchiser le contenu :</p>
+            
+            <div class="code-block">
+&lt;!-- h1: Titre principal (un seul par page pour le SEO) --&gt;
+&lt;h1&gt;Titre Principal de ma Page&lt;/h1&gt;
+
+&lt;!-- h2: Sous-titres importants --&gt;
+&lt;h2&gt;Section Importante&lt;/h2&gt;
+
+&lt;!-- h3: Sous-sections --&gt;
+&lt;h3&gt;Sous-section&lt;/h3&gt;
+
+&lt;!-- h4 à h6: Titres de niveau inférieur --&gt;
+&lt;h4&gt;Titre de 4ème niveau&lt;/h4&gt;
+&lt;h5&gt;Titre de 5ème niveau&lt;/h5&gt;
+&lt;h6&gt;Titre de 6ème niveau&lt;/h6&gt;
+            </div>
+            
+            <div class="exemple">
+                <h1 style="font-size: 2em;">Voici un h1</h1>
+                <h2 style="font-size: 1.5em;">Voici un h2</h2>
+                <h3 style="font-size: 1.3em;">Voici un h3</h3>
+                <h4>Voici un h4</h4>
+                <h5>Voici un h5</h5>
+                <h6>Voici un h6</h6>
+            </div>
+        </section>
+
+        <!-- Section 9: Mise en forme du texte -->
+        <section id="texte">
+            <h2>9. ✨ La mise en forme du texte</h2>
+            <p>HTML offre plusieurs balises pour mettre en forme le texte :</p>
+            
+            <div class="code-block">
+&lt;!-- Texte en gras (importance forte pour les moteurs de recherche) --&gt;
+&lt;p&gt;&lt;strong&gt;Texte très important&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Texte en gras (visuel uniquement)&lt;/b&gt;&lt;/p&gt;
+
+&lt;!-- Texte en italique (emphase pour les moteurs de recherche) --&gt;
+&lt;p&gt;&lt;em&gt;Texte avec emphase&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Texte en italique (visuel uniquement)&lt;/i&gt;&lt;/p&gt;
+
+&lt;!-- Autres mises en forme --&gt;
+&lt;p&gt;&lt;u&gt;Texte souligné&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Texte surligné&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Texte supprimé&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;Texte inséré&lt;/ins&gt;&lt;/p&gt;
+
+&lt;!-- Exposants et indices --&gt;
+&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O (indice)&lt;/p&gt;
+&lt;p&gt;E=mc&lt;sup&gt;2&lt;/sup&gt; (exposant)&lt;/p&gt;
+
+&lt;!-- Texte préformatté (conserve espaces et retours à la ligne) --&gt;
+&lt;pre&gt;
+    Ce texte conserve
+        ses espaces
+            et ses retours à la ligne
+&lt;/pre&gt;
+
+&lt;!-- Ligne horizontale --&gt;
+&lt;hr&gt;
+            </div>
+            
+            <div class="exemple">
+                <p><strong>Texte très important</strong> vs <b>Texte en gras</b></p>
+                <p><em>Texte avec emphase</em> vs <i>Texte en italique</i></p>
+                <p><u>Texte souligné</u></p>
+                <p><mark>Texte surligné</mark></p>
+                <p><del>Texte supprimé</del> et <ins>Texte inséré</ins></p>
+                <p>H<sub>2</sub>O et E=mc<sup>2</sup></p>
+                <hr>
+            </div>
+        </section>
+
+        <!-- Section 10: Les listes -->
+        <section id="listes">
+            <h2>10. 📋 Faire des listes</h2>
+            <p>HTML propose trois types de listes principales :</p>
+            
+            <h3>Liste non ordonnée (à puces)</h3>
+            <div class="code-block">
+&lt;!-- ul = unordered list (liste non ordonnée) --&gt;
+&lt;ul&gt;
+    &lt;!-- li = list item (élément de liste) --&gt;
+    &lt;li&gt;Premier élément&lt;/li&gt;
+    &lt;li&gt;Deuxième élément&lt;/li&gt;
+    &lt;li&gt;Troisième élément&lt;/li&gt;
+&lt;/ul&gt;
+            </div>
+            
+            <h3>Liste ordonnée (numérotée)</h3>
+            <div class="code-block">
+&lt;!-- ol = ordered list (liste ordonnée) --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Première étape&lt;/li&gt;
+    &lt;li&gt;Deuxième étape&lt;/li&gt;
+    &lt;li&gt;Troisième étape&lt;/li&gt;
+&lt;/ol&gt;
+            </div>
+            
+            <h3>Liste avec des lettres (attribut type)</h3>
+            <div class="code-block">
+&lt;!-- type="a" pour lettres minuscules --&gt;
+&lt;ol type="a"&gt;
+    &lt;li&gt;Premier point&lt;/li&gt;
+    &lt;li&gt;Deuxième point&lt;/li&gt;
+    &lt;li&gt;Troisième point&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- type="A" pour lettres majuscules --&gt;
+&lt;ol type="A"&gt;
+    &lt;li&gt;Premier point&lt;/li&gt;
+    &lt;li&gt;Deuxième point&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- type="i" pour chiffres romains minuscules --&gt;
+&lt;ol type="i"&gt;
+    &lt;li&gt;Premier point&lt;/li&gt;
+    &lt;li&gt;Deuxième point&lt;/li&gt;
+&lt;/ol&gt;
+            </div>
+            
+            <h3>Liste de définitions</h3>
+            <div class="code-block">
+&lt;!-- dl = definition list (liste de définitions) --&gt;
+&lt;dl&gt;
+    &lt;!-- dt = definition term (terme à définir) --&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;!-- dd = definition description (définition) --&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+            </div>
+            
+            <div class="exemple">
+                <h4>Exemples de rendu :</h4>
+                <ul>
+                    <li>Élément avec puce</li>
+                    <li>Autre élément avec puce</li>
+                </ul>
+                
+                <ol>
+                    <li>Premier élément numéroté</li>
+                    <li>Deuxième élément numéroté</li>
+                </ol>
+                
+                <ol type="a">
+                    <li>Élément avec lettre a</li>
+                    <li>Élément avec lettre b</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section 11: Les liens -->
+        <section id="liens">
+            <h2>11. 🔗 Tout sur les liens</h2>
+            <p>Les liens sont l'essence du web. La balise <code>&lt;a&gt;</code> (anchor) permet de créer des liens :</p>
+            
+            <h3>Lien externe (vers un autre site)</h3>
+            <div class="code-block">
+&lt;!-- href = hypertext reference (référence du lien) --&gt;
+&lt;!-- target="_blank" = ouvrir dans un nouvel onglet --&gt;
+&lt;a href="https://believemy.com" target="_blank"&gt;Aller sur BelieveMyco&lt;/a&gt;
+
+&lt;!-- rel="noopener noreferrer" pour la sécurité avec target="_blank" --&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;
+    Lien sécurisé vers l'extérieur
+&lt;/a&gt;
+            </div>
+            
+            <h3>Lien interne (vers une section de la page)</h3>
+            <div class="code-block">
+&lt;!-- Lien vers une ancre dans la même page --&gt;
+&lt;a href="#introduction"&gt;Aller à l'introduction&lt;/a&gt;
+
+&lt;!-- L'élément cible avec l'id correspondant --&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+            </div>
+            
+            <h3>Lien vers une autre page du site</h3>
+            <div class="code-block">
+&lt;!-- Lien relatif (même dossier) --&gt;
+&lt;a href="contact.html"&gt;Page de contact&lt;/a&gt;
+
+&lt;!-- Lien vers un sous-dossier --&gt;
+&lt;a href="pages/about.html"&gt;À propos&lt;/a&gt;
+
+&lt;!-- Lien vers le dossier parent --&gt;
+&lt;a href="../index.html"&gt;Retour à l'accueil&lt;/a&gt;
+            </div>
+            
+            <h3>Lien pour télécharger un fichier</h3>
+            <div class="code-block">
+&lt;!-- L'attribut download force le téléchargement --&gt;
+&lt;a href="documents/cv.pdf" download="Mon_CV.pdf"&gt;
+    Télécharger mon CV
+&lt;/a&gt;
+
+&lt;!-- Télécharger une image --&gt;
+&lt;a href="images/logo.png" download="logo_believemy.png"&gt;
+    Télécharger le logo
+&lt;/a&gt;
+            </div>
+            
+            <h3>Lien pour envoyer un email</h3>
+            <div class="code-block">
+&lt;!-- Lien email simple --&gt;
+&lt;a href="mailto:contact@example.com"&gt;Envoyer un email&lt;/a&gt;
+
+&lt;!-- Email avec sujet prédéfini --&gt;
+&lt;a href="mailto:louisnicolas@believemy.com?subject=Premier contact"&gt;
+    Contacter Louis Nicolas
+&lt;/a&gt;
+
+&lt;!-- Email complet avec destinataires multiples --&gt;
+&lt;a href="mailto:contact@example.com?subject=Demande d'information&amp;cc=info@example.com&amp;bcc=admin@example.com&amp;body=Bonjour,%0D%0A%0D%0AJe souhaiterais...%0D%0A%0D%0ACordialement"&gt;
+    Email complet
+&lt;/a&gt;
+            </div>
+            
+            <h3>Lien avec infobulle (tooltip)</h3>
+            <div class="code-block">
+&lt;!-- L'attribut title affiche une infobulle au survol --&gt;
+&lt;a href="https://believemy.com" 
+   title="BelieveMyco - Plateforme de formation en ligne"
+   target="_blank"&gt;
+    BelieveMyco
+&lt;/a&gt;
+            </div>
+            
+            <div class="exemple">
+                <p>Exemples de liens :</p>
+                <ul>
+                    <li><a href="#introduction" title="Aller à l'introduction">Lien interne avec tooltip</a></li>
+                    <li><a href="mailto:contact@example.com?subject=Test" title="Envoyer un email">Lien email</a></li>
+                    <li><a href="https://believemy.com" target="_blank" title="Formation en ligne">Lien externe</a></li>
+                </ul>
+            </div>
+            
+            <div class="important">
+                <strong>🎯 Paramètres email :</strong><br>
+                • <code>subject</code> = Sujet de l'email<br>
+                • <code>cc</code> = Copie carbone (visible)<br>
+                • <code>bcc</code> = Copie carbone invisible<br>
+                • <code>body</code> = Corps du message<br>
+                • <code>%0D%0A</code> = Retour à la ligne dans l'URL
+            </div>
+        </section>
+
+        <!-- Section 12: Template d'email -->
+        <section id="email-template">
+            <h2>12. 📧 Créer un template d'email professionnel</h2>
+            <p>Créer des emails HTML nécessite des techniques spéciales car les clients email ont des limitations :</p>
+            
+            <h3>Structure de base d'un email HTML</h3>
+            <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Newsletter Professionnelle&lt;/title&gt;
+    &lt;!-- CSS inline obligatoire pour les emails --&gt;
+&lt;/head&gt;
+&lt;body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;"&gt;
+    &lt;!-- Container principal avec largeur fixe --&gt;
+    &lt;table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"&gt;
+        &lt;tr&gt;
+            &lt;td align="center" style="padding: 20px 0;"&gt;
+                &lt;!-- Template de 600px de large (standard email) --&gt;
+                &lt;table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" 
+                       style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"&gt;
+                    
+                    &lt;!-- En-tête --&gt;
+                    &lt;tr&gt;
+                        &lt;td style="background-color: #2c3e50; padding: 30px; text-align: center; border-radius: 8px 8px 0 0;"&gt;
+                            &lt;h1 style="color: #ffffff; margin: 0; font-size: 28px;"&gt;
+                                🚀 Mon Entreprise
+                            &lt;/h1&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;!-- Contenu principal --&gt;
+                    &lt;tr&gt;
+                        &lt;td style="padding: 40px 30px;"&gt;
+                            &lt;h2 style="color: #2c3e50; margin-top: 0; font-size: 24px;"&gt;
+                                Bonjour [PRENOM] !
+                            &lt;/h2&gt;
+                            
+                            &lt;p style="color: #555555; line-height: 1.6; font-size: 16px;"&gt;
+                                Nous espérons que vous allez bien. Voici les dernières nouvelles 
+                                de notre entreprise et nos offres exclusives.
+                            &lt;/p&gt;
+                            
+                            &lt;!-- Bouton CTA (Call To Action) --&gt;
+                            &lt;table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;"&gt;
+                                &lt;tr&gt;
+                                    &lt;td style="text-align: center;"&gt;
+                                        &lt;a href="https://mon-site.com/offre" 
+                                           style="display: inline-block; background-color: #3498db; color: #ffffff; 
+                                                  padding: 15px 30px; text-decoration: none; border-radius: 5px; 
+                                                  font-weight: bold; font-size: 16px;"&gt;
+                                            Découvrir l'offre 🎯
+                                        &lt;/a&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                            
+                            &lt;!-- Section avec image --&gt;
+                            &lt;table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"&gt;
+                                &lt;tr&gt;
+                                    &lt;td width="50%" style="padding-right: 15px; vertical-align: top;"&gt;
+                                        &lt;img src="https://via.placeholder.com/250x150" 
+                                             alt="Image promotionnelle" 
+                                             style="width: 100%; height: auto; display: block; border-radius: 5px;"&gt;
+                                    &lt;/td&gt;
+                                    &lt;td width="50%" style="padding-left: 15px; vertical-align: top;"&gt;
+                                        &lt;h3 style="color: #2c3e50; margin-top: 0;"&gt;Nouveauté !&lt;/h3&gt;
+                                        &lt;p style="color: #555555; line-height: 1.6;"&gt;
+                                            Découvrez notre nouveau produit révolutionnaire 
+                                            qui va changer votre quotidien.
+                                        &lt;/p&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;!-- Pied de page --&gt;
+                    &lt;tr&gt;
+                        &lt;td style="background-color: #ecf0f1; padding: 30px; text-align: center; 
+                                   border-radius: 0 0 8px 8px;"&gt;
+                            
+                            &lt;!-- Réseaux sociaux --&gt;
+                            &lt;table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto 20px;"&gt;
+                                &lt;tr&gt;
+                                    &lt;td style="padding: 0 10px;"&gt;
+                                        &lt;a href="https://facebook.com/monentreprise" style="text-decoration: none;"&gt;
+                                            &lt;img src="https://via.placeholder.com/32x32" 
+                                                 alt="Facebook" 
+                                                 style="width: 32px; height: 32px; display: block;"&gt;
+                                        &lt;/a&gt;
+                                    &lt;/td&gt;
+                                    &lt;td style="padding: 0 10px;"&gt;
+                                        &lt;a href="https://twitter.com/monentreprise" style="text-decoration: none;"&gt;
+                                            &lt;img src="https://via.placeholder.com/32x32" 
+                                                 alt="Twitter" 
+                                                 style="width: 32px; height: 32px; display: block;"&gt;
+                                        &lt;/a&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                            
+                            &lt;p style="color: #7f8c8d; font-size: 14px; margin: 10px 0;"&gt;
+                                Mon Entreprise SARL&lt;br&gt;
+                                123 Rue de la Paix, 75001 Paris&lt;br&gt;
+                                Téléphone : 01 23 45 67 89
+                            &lt;/p&gt;
+                            
+                            &lt;p style="color: #7f8c8d; font-size: 12px; margin-top: 20px;"&gt;
+                                Vous recevez cet email car vous êtes inscrit à notre newsletter.&lt;br&gt;
+                                &lt;a href="[LIEN_DESINSCRIPTION]" style="color: #3498db;"&gt;Se désinscrire&lt;/a&gt; | 
+                                &lt;a href="[LIEN_PREFERENCES]" style="color: #3498db;"&gt;Gérer mes préférences&lt;/a&gt;
+                            &lt;/p&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+            
+            <h3>🎯 Bonnes pratiques pour les emails HTML :</h3>
+            <ul>
+                <li><strong>Utilisez des tables</strong> pour la mise en page (les divs ne fonctionnent pas partout)</li>
+                <li><strong>CSS inline uniquement</strong> - pas de feuilles de style externes</li>
+                <li><strong>Largeur maximum 600px</strong> pour une bonne lisibilité</li>
+                <li><strong>Images hébergées en ligne</strong> avec attribut alt obligatoire</li>
+                <li><strong>Testez sur plusieurs clients</strong> (Gmail, Outlook, Apple Mail, etc.)</li>
+                <li><strong>Version mobile-friendly</strong> avec media queries si possible</li>
+                <li><strong>Lien de désinscription obligatoire</strong> (RGPD)</li>
+            </ul>
+            
+            <div class="important">
+                <strong>⚠️ Limitations des emails :</strong><br>
+                • Pas de JavaScript<br>
+                • CSS limité (pas de flexbox, grid, etc.)<br>
+                • Support inconsistant selon les clients<br>
+                • Images souvent bloquées par défaut
+            </div>
+            
+            <h3>🔧 Outils recommandés pour les emails :</h3>
+            <ul>
+                <li><strong>MJML</strong> - Framework pour emails responsive</li>
+                <li><strong>Litmus</strong> - Test sur différents clients email</li>
+                <li><strong>Email on Acid</strong> - Tests et prévisualisation</li>
+                <li><strong>Can I Email</strong> - Compatibilité des propriétés CSS</li>
+            </ul>
+        </section>
+
+        <!-- Section bonus: Exercices pratiques -->
+        <section id="exercices">
+            <h2>13. 🏋️ Exercices pratiques</h2>
+            <div class="important">
+                <h3>Exercice 1 : Ma première page</h3>
+                <p>Créez une page HTML avec :</p>
+                <ul>
+                    <li>Un titre principal avec votre nom</li>
+                    <li>Trois paragraphes sur vous (hobbies, études, projets)</li>
+                    <li>Une liste de vos compétences</li>
+                    <li>Un lien vers votre profil LinkedIn</li>
+                </ul>
+            </div>
+            
+            <div class="important">
+                <h3>Exercice 2 : Page d'entreprise</h3>
+                <p>Créez une page d'entreprise avec :</p>
+                <ul>
+                    <li>Header avec navigation</li>
+                    <li>Section "À propos"</li>
+                    <li>Liste des services</li>
+                    <li>Formulaire de contact (email)</li>
+                    <li>Footer avec informations légales</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion">
+            <h2>🎉 Félicitations !</h2>
+            <p>Vous avez maintenant une base solide en HTML ! Ce langage de balisage est la fondation de tout le web moderne.</p>
+            
+            <h3>🔥 Prochaines étapes recommandées :</h3>
+            <ol>
+                <li><strong>CSS</strong> - Pour styliser vos pages HTML</li>
+                <li><strong>JavaScript</strong> - Pour rendre vos pages interactives</li>
+                <li><strong>Frameworks</strong> - Bootstrap, Tailwind CSS</li>
+                <li><strong>SEO</strong> - Optimisation pour les moteurs de recherche</li>
+                <li><strong>Accessibilité</strong> - Rendre vos sites utilisables par tous</li>
+            </ol>
+            
+            <div class="important">
+                <strong>💡 Conseil final :</strong> La pratique est essentielle ! Créez des projets personnels et expérimentez avec le code. N'hésitez pas à consulter la documentation MDN Web Docs pour approfondir vos connaissances.
+            </div>
+        </section>
+
+        <!-- Footer du cours -->
+        <footer style="margin-top: 50px; padding: 30px; background-color: #2c3e50; color: white; border-radius: 8px; text-align: center;">
+            <h3>📚 Cours HTML Complet - EPITECH La Plateforme</h3>
+            <p>Cours créé pour votre apprentissage du développement web</p>
+            <p><em>Inspiré de la formation BelieveMyco et adapté pour vos besoins spécifiques</em></p>
+            <p>Bonne chance dans votre parcours de développeur ! 🚀</p>
+        </footer>
+    </div>
+
+    <!-- Script pour la navigation fluide (bonus) -->
+    <script>
+        // JavaScript pour un scroll fluide vers les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Petit message de bienvenue dans la console (pour les curieux !)
+        console.log('🎉 Félicitations ! Vous avez ouvert la console. C\'est le début de votre aventure de développeur !');
+        console.log('💡 Utilisez F12 pour ouvrir les outils de développement et inspecter le code de cette page.');
+    </script>
+</body>
+</html>
